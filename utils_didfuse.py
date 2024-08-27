@@ -32,12 +32,12 @@ def l1_addition(y1,y2,window_width=1):
 def Test_fusion(img_test1,img_test2,addition_mode='Sum'):
     AE_Encoder1 = AE_Encoder().to(device)
     AE_Encoder1.load_state_dict(torch.load(
-            ".\Models\Encoder_weight_IJCAI.pkl"
+            ".\Train_result\Encoder_weight.pkl"
             )['weight'])
     
     AE_Decoder1 = AE_Decoder().to(device)
     AE_Decoder1.load_state_dict(torch.load(
-            ".\Models\Decoder_weight_IJCAI.pkl"
+            ".\Train_result\Decoder_weight.pkl"
             )['weight'])
     AE_Encoder1.eval()
     AE_Decoder1.eval()
